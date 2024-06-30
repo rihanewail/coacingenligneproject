@@ -1,0 +1,251 @@
+/* Reset and General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* Header Styles */
+header {
+    background-color: #ffffff;
+    color: #209677;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 2px solid #28bf96;
+    border-radius: 10px ;
+    
+
+    padding: 5px;
+}
+
+.searchbar input[type="search"] {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 200px;
+}
+
+.searchbar input[type="search"]::placeholder {
+    color: #209677;
+}
+
+.searchbar .fas.fa-search {
+    color: #209677;
+    margin-right: 5px;
+}
+
+.user .fas.fa-user {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.logo .nav__logo {
+    font-size: 24px;
+    color:#209677;
+    font-weight: 700;
+
+}
+
+/* Container */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    height: 100%;
+    background-color: #28bf96;
+    color: #fff;
+    padding: 30px;
+    transition: width 0.3s ease;
+    overflow: hidden;
+   
+}
+
+.sidebar.collapsed {
+    width: 80px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: #209677;
+}
+
+.sidebar ul li a i {
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+/* Main Content */
+main{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+/* Card */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #000000;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Request and Client Styles */
+.registration-request,
+.event-request,
+.client,
+.specialist {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    transition: background-color 0.3s ease;
+}
+
+.registration-request:hover,
+.event-request:hover,
+.client:hover,
+.specialist:hover {
+    background-color: #e5e5e5;
+}
+
+.details {
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.details h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.details p {
+    font-size: 16px;
+    color: #666;
+}
+
+.image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-request .image {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+}
+
+.event-request .date {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.rating {
+    color: #ffc107;
+    margin-top: 5px;
+}
+
+/* Button Styles */
+.btn {
+    background-color: #28bf96;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.btn:hover {
+    background-color: #209677;
+}
+
+.btn-danger {
+    background-color: #ff5b5b;
+}
+
+.btn-danger:hover {
+    background-color: #cc4747;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+/* Footer Styles */
+footer {
+    background-color: #28bf96;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .containeer {
+    max-width: 1200px;
+    margin: 0 auto;
+}

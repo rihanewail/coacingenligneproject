@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../sytles/add repas.css" />
+  <title>Nutrition Fitness</title>
+</head>
+
+<body>
+  <div class="container">
+    <nav>
+      <div class="nav__logo">Nutrition Fitness</div>
+      <ul class="nav__links">
+        <li class="link"> <a href="/index.html">Home</a></li>
+        <li class="link"> <a href="#service">Service</a></li>
+        <li class="link"> <a href="#trainers">coach</a></li>
+        <li class="link"> <a href="#nutritionists">Nutrition</a></li>
+        <li class="link"> <a href="">feedback</a></li>
+        <li class="link"> <a href="#about">About us</a></li>
+      </ul>
+      <div class="nav_button">
+        <p>noro@gamil.com</p>
+        <p class="user-icon"><i class="ri-user-3-line"></i></p>
+        <!-- Navigation Interface -->
+        <div class="navigation-interface">
+            <ul class="navigation-menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="../client/add curse.html">add curse</a></li>
+                <li><a href="/client/add repas.html">add repas</a></li>
+                <li><a href="/admin/dashbord.html">dashbord</a></li>
+                <li><a href="/specialist/add recipe.html">add recipe</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="menu-icon" onclick="toggleNavigation()">
+      <i class="ri-menu-line"></i>
+    </div>
+    
+
+    </nav>
+    <div class="form-container">
+        <div class="form-section">
+            <h2>Add Meal</h2>
+            <form id="addMealForm">
+                <!-- قسم الوجبة -->
+                <div class="form-group">
+                    <label for="mealName">Meal Name</label>
+                    <input type="text" id="mealName" name="mealName" required>
+                </div>
+                <div class="form-group">
+                    <label for="mealDate">Date</label>
+                    <input type="datetime-local" id="mealDate" name="mealDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="mealDescription">Description</label>
+                    <textarea id="mealDescription" name="mealDescription" rows="4" required></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="form-section" >
+            <!-- قسم العناصر -->
+            <h2>Meal Items</h2>
+            <div class="form-group" id="itemContainer">
+                <div class="item">
+                    <h3>Item 1</h3>
+                    <div class="form-group">
+                        <label for="itemName1">Item Name</label>
+                        <input type="text" id="itemName1" name="itemName1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemType1">Type</label>
+                        <select id="itemType1" name="itemType1" required>
+                            <option value="vegetable"> 🥦
+                                Vegetable</option>
+                              <option value="fruit">🍎 Fruit</option>
+                              <option value="grain">🌾Grain</option>
+                              <option value="protein">🍗Protein</option>
+                              <option value="dairy">🥛Dairy</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemQuantity1">Quantity (grams)</label>
+                        <input type="number" id="itemQuantity1" name="itemQuantity1" required>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn" id="addItemBtn"><i class="fas fa-plus"></i> Add Item</button>
+        </div>
+    </div>
+ 
+    <button type="submit" class="submit">submit</button>
+</div>
+<footer>
+    <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Contact Us</a>
+    </div>
+    <p>&copy; 2023 Nutrifitness. All rights reserved.</p>
+</footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("addItemBtn").addEventListener("click", function () {
+            var itemContainer = document.getElementById("itemContainer");
+            var newItemIndex = itemContainer.children.length + 1;
+
+            var newItem = document.createElement("div");
+            newItem.classList.add("item");
+            newItem.innerHTML = `
+                <h3>Item ${newItemIndex}</h3>
+                <div class="form-group">
+                    <label for="itemName${newItemIndex}">Item Name</label>
+                    <input type="text" id="itemName${newItemIndex}" name="itemName${newItemIndex}" required>
+                </div>
+                <div class="form-group">
+                    <label for="itemType${newItemIndex}">Type</label>
+                    <select id="itemType${newItemIndex}" name="itemType${newItemIndex}" required>
+                        <option value="vegetable">Vegetable</option>
+                        <option value="fruit">Fruit</option>
+                        <option value="grain">Grain</option>
+                        <option value="protein">Protein</option>
+                        <option value="dairy">Dairy</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="itemQuantity${newItemIndex}">Quantity (grams)</label>
+                    <input type="number" id="itemQuantity${newItemIndex}" name="itemQuantity${newItemIndex}" required>
+                </div>
+            `;
+
+            itemContainer.appendChild(newItem);
+        });
+    });
+</script>
+<script>
+    function toggleNavigation() {
+      var navInterface = document.querySelector('.navigation-interface');
+      navInterface.classList.toggle('show');
+    }
+    </script>
+</body>
+</html>

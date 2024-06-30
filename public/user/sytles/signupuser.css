@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: #28bf96;
+  --primary-color-dark: #209677;
+  --text-dark: #111827;
+  --text-light: #6b7280;
+  --white: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html li {
+  text-decoration: none;
+  list-style: none;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  padding: 30px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav__logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav_button {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.link a {
+  text-decoration: none;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color: var(--primary-color);
+}
+
+/* Client Registration Form */
+.client-registration-form {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.client-registration-form h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.client-registration-form .form-group {
+  margin-bottom: 1.5rem;
+  width: 48%;
+}
+
+.client-registration-form label {
+  display: block;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.client-registration-form input[type="text"],
+.client-registration-form input[type="email"],
+.client-registration-form input[type="password"],
+.client-registration-form input[type="tel"],
+.client-registration-form input[type="number"],
+.client-registration-form select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--text-light);
+  border-radius: 3px;
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+.client-registration-form .file-upload {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  width: 48%;
+}
+
+.client-registration-form .file-upload label {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 0.75rem 0.75rem;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.client-registration-form .file-upload label:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.client-registration-form .file-upload input[type="file"] {
+  display: none;
+}
+
+.client-registration-form .mode-de-vie {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 3rem;
+  width: 100%;
+}
+
+.client-registration-form .mode-de-vie .section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem ;
+  margin-bottom: 1rem;
+}
+
+.client-registration-form .mode-de-vie .section label {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  
+}
+
+.client-registration-form .mode-de-vie .section input[type="radio"],
+.client-registration-form .mode-de-vie .section input[type="number"] {
+  width: auto;
+}
+
+.client-registration-form .objectifs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 48%;
+  font-weight: 600;
+
+}
+
+.client-registration-form .objectifs label {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.client-registration-form .objectifs input[type="checkbox"] {
+  width: auto;
+}
+
+.client-registration-form .objectifs .objectif {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.client-registration-form .objectifs .objectif input[type="text"] {
+  flex: 1;
+}
+
+.client-registration-form .etat-sante {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  width: 48%;
+  margin-top: -60px;
+  
+}
+.add-objectif-btn{
+    padding: 0.3rem 0.3rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 320px;
+}
+.client-registration-form button[type="submit"] {
+  display: block;
+  margin: 0 auto;
+  width: 48%;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  padding: 2rem 1rem;
+  background-color: var(--primary-color);
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: var(--white);
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  color: var(--text-dark);
+}
+
+footer p {
+  color: var(--white);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav__links {
+    display: none;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav__links {
+    display: none;
+  }
+
+  .client-registration-form {
+    flex-direction: column;
+  }
+
+  .client-registration-form .form-group,
+  .client-registration-form .file-upload,
+  .client-registration-form .mode-de-vie,
+  .client-registration-form .objectifs,
+  .client-registration-form .etat-sante,
+  .client-registration-form button[type="submit"] {
+    width: 100%;
+  }
+}
